@@ -3,7 +3,6 @@
 int main() {
     printf("Super Trunfo - Cadastro das Cartas!\n");
 
-    char carta1, carta2;
     char estado1[20], estado2[20];
     char codigo1[20], codigo2[20];
     char cidade1[20], cidade2[20];
@@ -14,10 +13,10 @@ int main() {
 
     printf("Cadastrando a carta 1: \n");
     printf("Informe o Estado de (A-H): \n");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
 
     printf("Informe o código da carta (ex: A01): \n");
-    scanf("%s", &codigo1);
+    scanf("%s", codigo1);
 
     printf("Informe o nome da Cidade: \n");
     scanf("%s", cidade1);
@@ -29,20 +28,20 @@ int main() {
     scanf("%f", &area1);
 
     printf("Informe o PIB da Cidade (em bilhões de reais): \n");
-    scanf("%f", &pib1);
+    scanf("%2f", &pib1);
 
     printf("Informe o número de pontos turísticos da Cidade: \n");
-    scanf("%d", &pontos1);
+    scanf(" %d", &pontos1);
 
     printf("Primeira carta cadastrada! \n");
 
     printf("Cadastrando a carta 2: \n");  
     printf("Informe o Estado de (A-H): \n");
-    scanf("%d", &estado2);
+    scanf(" %c", &estado2);
 
     printf("Informe o código da carta (ex: A01): \n");
-    scanf("%s", &codigo2);
-        
+    scanf("%s", codigo2);
+
     printf("Informe o nome da Cidade: \n");
     scanf("%s", cidade2);
 
@@ -53,10 +52,10 @@ int main() {
     scanf("%f", &area2);
 
     printf("Informe o PIB da Cidade (em bilhões de reais): \n");
-    scanf("%f", &pib2);
+    scanf("%2f", &pib2);
 
     printf("Informe o número de pontos turísticos da Cidade: \n");
-    scanf("%d", &pontos2);
+    scanf(" %d", &pontos2);
     printf("Segunda carta cadastrada! \n");
 
     return 0;
