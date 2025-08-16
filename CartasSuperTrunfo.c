@@ -109,13 +109,13 @@ int main() {
     
     printf("\n--- Comparação das Cartas ---\n"); 
 
-    printf ("Populacão: %d\n");
-    printf ("Área: %d\n");
-    printf ("Pib: %d\n");
-    printf ("Pontos Turisticos: %d\n");
-    printf ("Densidade Populacional: %d\n");
-    printf ("Pib per Capita: %d\n");
-    printf ("Super Poder: %d\n");
+    printf ("Populacão: %d\n", populacao1 > populacao2);
+    printf ("Área: %d\n", area1 > area2);
+    printf ("Pib: %d\n", pib1 > pib2);
+    printf ("Pontos Turisticos: %d\n", pontos1 > pontos2);
+    printf ("Densidade Populacional: %d\n", densidade1 > densidade2);
+    printf ("Pib per Capita: %d\n", capita1 > capita2);
+    printf ("Super Poder: %d\n", poder1 > poder2);
 
     return 0;
 }
