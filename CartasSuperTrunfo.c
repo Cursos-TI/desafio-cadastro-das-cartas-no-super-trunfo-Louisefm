@@ -12,6 +12,7 @@ int main() {
     int pontos1, pontos2;
     float densidade1, densidade2;
     float capita1, capita2;
+    float poder1, poder2;
 
     printf("\n--- Cadastrando a carta 1: ---\n"); 
     printf("Informe o Estado de (A-H): \n");
@@ -35,9 +36,11 @@ int main() {
     printf("Informe o número de pontos turísticos da Cidade: \n");
     scanf("%d", &pontos1);
 
-    densidade1 = (float)(populacao1 / area1);
-
+    densidade1 = (float)(populacao1 / area1) / 1.0;
+   
     capita1 = (float)(pib1 / populacao1);
+
+    poder1 = populacao1 + area1 + pib1 + pontos1 + densidade1 + capita1;
 
     printf("\n--- Dados da Carta 1 ---\n");
     printf("Estado: %c \n", estado_letra1);
@@ -49,6 +52,7 @@ int main() {
     printf("Pontos Turísticos: %d \n", pontos1);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade1);      
     printf ("O PIB per Capita é: %.2f reais \n", capita1);  
+    printf ("O super Poder da Primeira carta é: %f\n", poder1);
 
     printf("Primeira carta cadastrada! \n");
 
@@ -74,9 +78,11 @@ int main() {
     printf("Informe o número de pontos turísticos da Cidade: \n");
     scanf("%d", &pontos2);
 
-    densidade2 = (float)(populacao2 / area2);
+    densidade2 = (float)(populacao2 / area2) / 1.0;
 
     capita2 = (float)(pib2 / populacao2);
+
+    poder2 = populacao2 + area2 + pib2 + pontos2 + densidade2 + capita2;
     
     printf("\n--- Dados da Carta 2 ---\n");
     printf("Estado: %c\n", estado_letra2);
@@ -88,7 +94,16 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos2);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade2);      
     printf ("O PIB per Capita é: %.2f reais \n", capita2);
+    printf ("O super Poder da Segunda carta é: %f\n", poder2);
+
     printf("Segunda carta cadastrada! \n");
+
+    // Comparação das Cartas
+
+      
+    
+    printf("\n--- Comparação de Cartas ---\n"); 
+
 
     return 0;
 }
