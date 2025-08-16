@@ -52,7 +52,7 @@ int main() {
     printf("Pontos Turísticos: %d \n", pontos1);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade1);      
     printf ("O PIB per Capita é: %.2f reais \n", capita1);  
-    printf ("O super Poder da Primeira carta é: %f\n", poder1);
+    printf ("O super Poder da Primeira carta é: %.1f\n", poder1);
 
     printf("Primeira carta cadastrada! \n");
 
@@ -94,16 +94,28 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos2);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade2);      
     printf ("O PIB per Capita é: %.2f reais \n", capita2);
-    printf ("O super Poder da Segunda carta é: %f\n", poder2);
+    printf ("O super Poder da Segunda carta é: %.1f\n", poder2);
 
     printf("Segunda carta cadastrada! \n");
 
     // Comparação das Cartas
-
-      
+    int resultadoPopulacao = populacao1 > populacao2;
+    int resultadoArea = area1 > area2;
+    int resultadoPib = pib1 > pib2;
+    int resultadoPonto = pontos1 > pontos2;
+    int resultadoDensidade = densidade1 > densidade2;
+    int resultadoCapita = capita1 > capita2;
+    int resultadoPoder = poder1 > poder2;
     
-    printf("\n--- Comparação de Cartas ---\n"); 
+    printf("\n--- Comparação das Cartas ---\n"); 
 
+    printf ("Populacão: %d\n");
+    printf ("Área: %d\n");
+    printf ("Pib: %d\n");
+    printf ("Pontos Turisticos: %d\n");
+    printf ("Densidade Populacional: %d\n");
+    printf ("Pib per Capita: %d\n");
+    printf ("Super Poder: %d\n");
 
     return 0;
 }
