@@ -6,7 +6,7 @@ int main() {
     char estado_letra1, estado_letra2;
     char codigo1[20], codigo2[20];
     char cidade1[20], cidade2[20];
-    int populacao1, populacao2;
+    long int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
@@ -25,7 +25,7 @@ int main() {
     scanf(" %19[^\n]", cidade1);
 
     printf("Informe a população da Cidade: \n");
-    scanf("%d", &populacao1);
+    scanf("%ld", &populacao1);
 
     printf("Informe a área da Cidade (km²): \n");
     scanf("%f", &area1);
@@ -67,7 +67,7 @@ int main() {
     scanf(" %19[^\n]", cidade2);
 
     printf("Informe a população da Cidade: \n");
-    scanf("%d", &populacao2);
+    scanf("%ld", &populacao2);
 
     printf("Informe a área da Cidade (km²): \n");
     scanf("%f", &area2);
