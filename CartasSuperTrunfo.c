@@ -46,8 +46,8 @@ int main() {
     printf("Estado: %c \n", estado_letra1);
     printf("Código: %s \n", codigo1);
     printf("Cidade: %s \n", cidade1);
-    printf("População: %d \n", populacao1);
-    printf("Área: %.2f km² \n", area1);
+    printf("População: %ld habitantes\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Pontos Turísticos: %d \n", pontos1);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade1);      
@@ -88,7 +88,7 @@ int main() {
     printf("Estado: %c\n", estado_letra2);
     printf("Código: %s\n", codigo2);
     printf("Cidade: %s\n", cidade2);
-    printf("População: %d\n", populacao2);
+    printf("População: %ld habitantes\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Pontos Turísticos: %d\n", pontos2);
@@ -117,5 +117,21 @@ int main() {
     printf ("Pib per Capita: %d\n", capita1 > capita2);
     printf ("Super Poder: %d\n", poder1 > poder2);
 
+    // Comparar um atributo.
+    
+     printf("\n--- Comparação das Cartas (Atributo Área)  ---\n"); 
+
+     printf("Carta 1: %s\n", cidade1); 
+     printf("Área: %.2f km²\n", area1);
+       
+     printf("Carta 2: %s\n", cidade2); 
+     printf("Área: %.2f km²\n", area2);
+
+    if (area1 > area2) {
+        printf("Resultado: A carta 1 venceu!\n");
+    }else {
+        printf("Resultado: A carta 2 venceu!\n");
+    }
+  
     return 0;
 }
