@@ -13,6 +13,7 @@ int main() {
     float densidade1, densidade2;
     float capita1, capita2;
     float poder1, poder2;
+    int opcao;
 
     printf("\n--- Cadastrando a carta 1: ---\n"); 
     printf("Informe o Estado de (A-H): \n");
@@ -47,7 +48,7 @@ int main() {
     printf("Código: %s \n", codigo1);
     printf("Cidade: %s \n", cidade1);
     printf("População: %ld habitantes\n", populacao1);
-    printf("Área: %.2f km²\n", area1);
+    printf("Área: %.2f km² \n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Pontos Turísticos: %d \n", pontos1);
     printf ("A desnsidade populacional é: %.2f hab/km² \n", densidade1);      
@@ -117,7 +118,7 @@ int main() {
     printf ("Pib per Capita: %d\n", capita1 > capita2);
     printf ("Super Poder: %d\n", poder1 > poder2);
 
-    // Comparar um atributo.
+    // Comparar um atributo escolhido pelo programador.
     
      printf("\n--- Comparação das Cartas (Atributo Área)  ---\n"); 
 
@@ -132,6 +133,71 @@ int main() {
     }else {
         printf("Resultado: A carta 2 venceu!\n");
     }
-  
+
+    // Menu interativo
+    printf("\n--- Menu interativo - Comparação das Cartas ---\n"); 
+    
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. Pib\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("Escolha uma opção:");
+    scanf("%d", &opcao);
+    
+    switch (opcao) {
+    case 1:
+        printf("População\n");
+        break;
+    case 2:
+        printf("Área\n");
+        break;
+    case 3:
+        printf("Pib\n");
+        break;
+    case 4:
+        printf("Número de Pontos Turísticos\n");
+        break;
+    case 5:
+        printf("Densidade Populacional\n");
+        break;
+    }
+    // Comparar os valores da opção selecionada
+    
+    if (populacao1 > populacao2){
+        printf("A Carta 1 venceu!\n");
+    }else if (populacao1 == populacao2){
+        printf("Houve um empate!\n");
+    }else{
+        printf("A Carta 2 venceu!\n");
+    }
+    if (area1 > area2){
+       printf("A Carta 1 venceu!\n");
+    }else if (area1 == area2){
+        printf("Houve um empate!\n");
+    }else{
+        printf("A Carta 2 venceu!\n");
+    }
+    if (pib1 > pib2){
+        printf("A Carta 1 venceu!\n");
+    }else if (pib1 == pib2){
+        printf("Houve um empate!\n");
+    }else{
+        printf("A Carta 2 venceu!\n");
+    }
+    if (pontos1 > pontos2){
+        printf("A Carta 1 venceu!\n");
+    }else if (pontos1 == pontos2){
+        printf("Houve um empate!\n");
+    }else{
+        printf("A Carta 2 venceu!\n");
+    }
+    if (densidade1 < densidade2){
+        printf("A Carta 1 venceu!\n");
+    }else if (densidade1 == densidade2){
+        printf("Houve um empate!\n");
+    }else{
+        printf("A Carta 2 venceu!\n");
+    }
     return 0;
 }
