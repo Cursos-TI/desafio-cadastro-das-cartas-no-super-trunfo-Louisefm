@@ -133,7 +133,7 @@ int main() {
     }else {
         printf("Resultado: A carta 2 venceu!\n");
     }
-    // Menu interativo
+    // Menu interativo Comparação de um atributo
     printf("\n--- Menu interativo - Comparação das Cartas ---\n"); 
     
     printf("1. População\n");
@@ -160,6 +160,9 @@ int main() {
     case 5:
         printf("Densidade Populacional\n");
         break;
+        default:
+        printf("Opção de jogo invalida!")
+        break;
     }
     // Função para determinar o vencedor da rodada com base no atributo escolhido
    
@@ -174,6 +177,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    break;
     case 2: // Área
     if (opcao == 2 && area1 > area2)
     {
@@ -184,6 +188,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    break;
     case 3: // Pib
     if (opcao == 3 && pib1 > pib2)
     {
@@ -194,6 +199,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    break;
     case 4: // Pontos
     if (opcao == 4 && pontos1 > pontos2)
     {
@@ -204,6 +210,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    break;
     case 5: // Densidade
     if (opcao == 5 && densidade1 < densidade2)
     {
@@ -216,14 +223,78 @@ int main() {
     }
             }
 
-            // Imprime o resultado
-    printf("\nResultado da rodada:\n");
+// Menu interativo Comparação de dois atributos
+    int primeiraOpcao, segundaOpcao;
+    printf("\n--- Menu interativo - Comparação das Cartas ---\n"); 
+    
+    printf ("Escolha a primeira opção")
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. Pib\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+     scanf("%d", &primeiraOpcao);
+    
+    switch (primeiraOpcao) {
+    case 1:
+        printf("Você escolheu População\n");
+        resultado1 = (populacao1 > populacao2) ? "Carta 1 Venceu" : "Carta 2 Venceu";
+        break;
+    case 2:
+        printf("Você escolheu Área\n");
+        resultado2 = (area1 > area2) ? "Carta 1 Venceu" : "Carta 2 Venceu";
+        break;
+    case 3:
+        printf("Você escolheu Pib\ n");
+        resultado3 = (pib1 > pib2) ? "Carta 1 Venceu" : "Carta 2 Venceu";        
+        break;
+    case 4:
+        printf("Você escolheu Número de Pontos Turísticos\n");
+        resultado4 = (pontos1 > pontos2) ? "Carta 1 Venceu" : "Carta 2 Venceu";   
+        break;
+    case 5:
+        printf("Você escolheu Densidade Populacional\n");
+        resultado5 = (densidade1 < densidade2) ? "Carta 1 Venceu" : "Carta 2 Venceu";   
+        break;
+        default:
+        printf("Opção de jogo invalida!")
+ }
+    printf ("Escolha a segunda opção")
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. Pib\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    scanf("%d", &segundaOpcao);
 
-    if (vencedor == carta1) {
-        printf("São Paulo venceu!\n");
-    } else if (vencedor == carta2) {
-        printf("Rio de Janeiro venceu!\n");
-    } else {
-        printf("Empate!\n");
+        if (primeiraOpcao == segundaOpcao)
+        {
+            printf("Você escolheu a mesma opção!")
+        } else {
+            switch (segundaOpcao) 
+    {
+    case 1:
+        printf("Você escolheu População\n");
+        resultado1 = (populacao1 > populacao2) ? "Carta 1 Venceu" : "Carta 2 Venceu";
+        break;
+    case 2:
+        printf("Você escolheu Área\n");
+        resultado2 = (area1 > area2) ? "Carta 1 Venceu" : "Carta 2 Venceu";
+        break;
+    case 3:
+        printf("Você escolheu Pib\n");
+        resultado3 = (pib1 > pib2) ? "Carta 1 Venceu" : "Carta 2 Venceu";        
+        break;
+    case 4:
+        printf("Você escolheu Número de Pontos Turísticos\n");
+        resultado4 = (pontos1 > pontos2) ? "Carta 1 Venceu" : "Carta 2 Venceu";   
+        break;
+    case 5:
+        printf("Você escolheu Densidade Populacional\n");
+        resultado5 = (densidade1 < densidade2) ? "Carta 1 Venceu" : "Carta 2 Venceu";   
+        break;
+        default:
+        printf("Opção de jogo invalida!");
+    }        
     return 0;
-}
+    }
