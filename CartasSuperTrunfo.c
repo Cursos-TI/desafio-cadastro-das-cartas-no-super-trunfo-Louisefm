@@ -14,10 +14,10 @@ int main() {
     float capita1, capita2;
     float poder1, poder2;
     int opcao;
-
+ 
     printf("\n--- Cadastrando a carta 1: ---\n"); 
     printf("Informe o Estado de (A-H): \n");
-    scanf(" %c", &estado_letra1);
+    scanf("%c", &estado_letra1);
 
     printf("Informe o código da carta (ex: A01): \n");
     scanf("%s", codigo1);
@@ -161,8 +161,10 @@ int main() {
         printf("Densidade Populacional\n");
         break;
     }
-    // Implementação da lógica
+    // Função para determinar o vencedor da rodada com base no atributo escolhido
    
+            switch (opcao) {
+    case 1: // População     
     if (opcao == 1 && populacao1 > populacao2)
     {
         printf("A Carta 1 venceu!\n");
@@ -172,6 +174,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    case 2: // Área
     if (opcao == 2 && area1 > area2)
     {
        printf("A Carta 1 venceu!\n");
@@ -181,6 +184,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    case 3: // Pib
     if (opcao == 3 && pib1 > pib2)
     {
         printf("A Carta 1 venceu!\n");
@@ -190,6 +194,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    case 4: // Pontos
     if (opcao == 4 && pontos1 > pontos2)
     {
         printf("A Carta 1 venceu!\n");
@@ -199,6 +204,7 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+    case 5: // Densidade
     if (opcao == 5 && densidade1 < densidade2)
     {
         printf("A Carta 1 venceu!\n");
@@ -208,5 +214,16 @@ int main() {
     } else {
         printf("A Carta 2 venceu!\n");
     }
+            }
+
+            // Imprime o resultado
+    printf("\nResultado da rodada:\n");
+
+    if (vencedor == carta1) {
+        printf("São Paulo venceu!\n");
+    } else if (vencedor == carta2) {
+        printf("Rio de Janeiro venceu!\n");
+    } else {
+        printf("Empate!\n");
     return 0;
 }
