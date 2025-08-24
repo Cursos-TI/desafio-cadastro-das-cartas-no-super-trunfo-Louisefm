@@ -133,7 +133,6 @@ int main() {
     }else {
         printf("Resultado: A carta 2 venceu!\n");
     }
-
     // Menu interativo
     printf("\n--- Menu interativo - Comparação das Cartas ---\n"); 
     
@@ -162,41 +161,51 @@ int main() {
         printf("Densidade Populacional\n");
         break;
     }
-    // Comparar os valores da opção selecionada
-    
-    if (populacao1 > populacao2){
+    // Implementação da lógica
+   
+    if (opcao == 1 && populacao1 > populacao2)
+    {
         printf("A Carta 1 venceu!\n");
-    }else if (populacao1 == populacao2){
+    } else if (opcao == 1 && populacao1 == populacao2)
+    {
         printf("Houve um empate!\n");
-    }else{
+    } else {
         printf("A Carta 2 venceu!\n");
     }
-    if (area1 > area2){
+    if (opcao == 2 && area1 > area2)
+    {
        printf("A Carta 1 venceu!\n");
-    }else if (area1 == area2){
+    } else if (opcao == 2 && area1 == area2)
+    {
         printf("Houve um empate!\n");
-    }else{
+    } else {
         printf("A Carta 2 venceu!\n");
     }
-    if (pib1 > pib2){
+    if (opcao == 3 && pib1 > pib2)
+    {
         printf("A Carta 1 venceu!\n");
-    }else if (pib1 == pib2){
+    } else if (opcao == 3 && pib1 == pib2)
+    {
         printf("Houve um empate!\n");
-    }else{
+    } else {
         printf("A Carta 2 venceu!\n");
     }
-    if (pontos1 > pontos2){
+    if (opcao == 4 && pontos1 > pontos2)
+    {
         printf("A Carta 1 venceu!\n");
-    }else if (pontos1 == pontos2){
+    } else if (opcao == 4 && pontos1 == pontos2)
+    {
         printf("Houve um empate!\n");
-    }else{
+    } else {
         printf("A Carta 2 venceu!\n");
     }
-    if (densidade1 < densidade2){
+    if (opcao == 5 && densidade1 < densidade2)
+    {
         printf("A Carta 1 venceu!\n");
-    }else if (densidade1 == densidade2){
+    } else if (opcao == 5 && densidade1 == densidade2)
+    {
         printf("Houve um empate!\n");
-    }else{
+    } else {
         printf("A Carta 2 venceu!\n");
     }
     return 0;
