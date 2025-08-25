@@ -227,7 +227,7 @@ int main() {
     int primeiraOpcao, segundaOpcao;
     printf("\n--- Menu interativo - Comparação das Cartas ---\n"); 
     
-    printf ("Escolha a primeira opção")
+    printf ("Escolha a primeira opção");
     printf("1. População\n");
     printf("2. Área\n");
     printf("3. Pib\n");
@@ -257,9 +257,10 @@ int main() {
         resultado5 = (densidade1 < densidade2) ? "Carta 1 Venceu" : "Carta 2 Venceu";   
         break;
         default:
-        printf("Opção de jogo invalida!")
+        printf("Opção de jogo invalida!");
+        break;
  }
-    printf ("Escolha a segunda opção")
+    printf ("Escolha a segunda opção");
     printf("1. População\n");
     printf("2. Área\n");
     printf("3. Pib\n");
@@ -295,6 +296,7 @@ int main() {
         break;
         default:
         printf("Opção de jogo invalida!");
+        break;
     }        
     return 0;
     }
