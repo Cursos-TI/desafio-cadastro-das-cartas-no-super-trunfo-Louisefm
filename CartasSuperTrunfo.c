@@ -210,7 +210,6 @@ int main() {
             printf("Opção de jogo inválida!\n");
             break;
     }
-
     // Operador Ternário Comparação de dois atributos - Nível mestre
     int primeiraOpcao, segundaOpcao;
     char *resultado1, *resultado2, *resultado3, *resultado4, *resultado5;
@@ -256,7 +255,7 @@ int main() {
             printf("Opção de jogo inválida!\n");
             break;
     }
-
+    printf("\n");
     printf("Escolha a segunda opção:\n");
     printf("1. População\n");
     printf("2. Área\n");
@@ -299,7 +298,17 @@ int main() {
                 break;
         }
     }     
+     // Exibir os Vencedores
+        printf("\n");
+        printf("Exibindo as Cartas vencedoras!\n");
+
+        printf("População: Carta %d venceu!\n", resultadoPopulacao ? 1 : 2);
+        printf("Área: Carta %d venceu!\n", resultadoArea ? 1 : 2);
+        printf("Pib: Carta %d venceu!\n", resultadoPib ? 1 : 2);
+        printf("Pontos Turísticos: Carta %d venceu!\n", resultadoPonto ? 1 : 2);
+        printf("Densidade Populacional: Carta %d venceu!\n", resultadoDensidade ? 1 : 2);
+
     printf("\n--- Fim do Jogo ---\n");
-    
+
         return 0;
     } 
